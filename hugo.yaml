@@ -24,33 +24,33 @@ params:
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "2006-01-02"
   defaultTheme: auto # dark, light
-  disableThemeToggle: false
+  disableThemeToggle: false   # 在页面标题旁边显示图标以更改主题
 
-  ShowReadingTime: true
-  ShowShareButtons: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  ShowReadingTime: true # 显示帖子阅读时间
+  ShowShareButtons: true # 显示分享按钮添加
+  ShowPostNavLinks: true # 在单个帖子下添加上一篇/下一篇帖子建议
+  ShowBreadCrumbs: true # 面包屑导航
   ShowCodeCopyButtons: false #显示复制代码按钮
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: false
+  comments: false # 评论功能。 https://gohugo.io/content-management/comments/
   hidemeta: false
   hideSummary: false
   showtoc: true # 在每篇文章开头显示目录
-  tocopen: false
+  tocopen: false # 使帖子的目录默认保持打开
 
-# 各种图标的地址
+  # 各种图标的地址
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "<link / abs url>"
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+    safari_pinned_tab: "/safari-pinned-tab.svg"
 
   label:
     text: "Home"
@@ -79,12 +79,8 @@ params:
     Content: Welcome to my blog
 
   socialIcons:
-    - name: x
-      url: "https://x.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/kldancer/klworldy.github.io"
 
   # 用于搜索引擎验证网站所有权，如果不用就注释掉
 #  analytics:
@@ -95,10 +91,11 @@ params:
 #    yandex:
 #      SiteVerificationTag: "XYZabc"
 
+  # 文章封面图片。https://github.com/adityatelange/hugo-PaperMod/wiki/Features#toc、 https://gohugo.io/content-management/page-bundles/
   cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+    hidden: true # 隐藏在任何地方，但不在结构化数据中
+    hiddenInList: true # 隐藏在列表页和主页上
+    hiddenInSingle: true # 隐藏在单页上
 
   editPost:
     URL: "https://github.com/<path_to_repo>/content" # 填入Github仓库的地址
