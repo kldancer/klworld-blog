@@ -13,8 +13,6 @@ minify:
   minifyOutput: true
 
 params:
-  busuanzi:
-    enable: true
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: ExampleSite # 首页标题
   description: "ExampleSite description"

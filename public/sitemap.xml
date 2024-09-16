@@ -2,18 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/blog-test/</loc>
-    <lastmod>2024-08-29T21:42:47+08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-08-29T21:42:47+08:00</lastmod>
+    <lastmod>2024-09-16T11:48:57+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-08-29T21:42:47+08:00</lastmod>
+    <loc>http://localhost:1313/tags/linux-kernel/</loc>
+    <lastmod>2024-09-16T11:48:57+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/kerneldataflow/</loc>
+    <lastmod>2024-09-16T11:48:57+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-09-16T11:48:57+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2024-09-16T11:48:57+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2024-09-16T11:48:57+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2024-09-16T11:48:57+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-09-16T11:48:57+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/blog-test/</loc>
+    <lastmod>2024-08-29T21:42:47+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/archives/</loc>
   </url><url>
