@@ -13,7 +13,7 @@ categories= ["网络"]
 
 大体流程如图所示：
 
-![kernelDataFlow_1.png](img/kernelDataFlow_1.png)
+![kernelDataFlow_1.png](/img/kernelDataFlow_1.png)
 
 1. 用户进程调用send方法开始发送数据，最终会调用到系统调用`__sys_sendto` 方法。在该方法中：
     1. 会根据传入的文件描述符查找内核中的socket对象。
@@ -46,7 +46,7 @@ categories= ["网络"]
 
 大体流程如下：
 
-![kernelDataFlow_2.png](img/kernelDataFlow_2.png)
+![kernelDataFlow_2.png](/img/kernelDataFlow_2.png)
 
 当网卡收到数据以后，CPU发起一个中断，以通知CPU有数据到达。当CPU收到中断请求后，会去调用网络驱动注册的中断处理函数，触发软中断。ksoftirqd 检测到有软中断请求到达，开始轮询收包，收到后交由各级协议栈处理。当协议栈处理完并把数据放到接收队列的之后，唤醒用户进程。
 

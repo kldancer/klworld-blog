@@ -16,13 +16,6 @@
       <description>前言 博主从事云计算行业已经近两年半了，其中接触了近一年半的容器网络，愈发觉得这就是我目前的大体的职业方向。建立该站的初心是希望自己能够对目前接触到的专业知识有进一步的理解掌握，对今后工作中将要接触到的知识理解透彻，逐渐补全自身。废话不多说，网络的话题很大，本篇文章想从Linux内核的网络数据流开始聊起，博主并不擅长C语言，本次归纳只是一个简单的流程梳理，至于其中细节就待今后用到了再细细研究。&#xA;内核发送数据包到网络设备的流程 大体流程如图所示：&#xA;用户进程调用send方法开始发送数据，最终会调用到系统调用__sys_sendto 方法。在该方法中： 会根据传入的文件描述符查找内核中的socket对象。 将用户空间的待发送数据缓冲区导入到内核空间，并以此构建出msghdr对象。 调用socket_sendmsg，最终选择合适的发送函数（inet6_sendmsg或inet_sendmsg）并执行，进入内核协议栈处理。 在进入到内核协议栈之后， 找到Socket上的具体协议的发送函数，在该发送函数中会创建数据结构sk_buffer，将msghdr对象的数据拷贝到之中，并调用tcp_write_queue_tail函数获取Socket发送队列中的队尾元素，将新创建的sk_buffer添加到【内核socket对象的发送队列尾部】。（如果此时不满足发送条件【比如未发送数据没有达到TCP滑动时间窗口的一半】，则用户进程将数据拷贝到【socket的发送队列】里他的工作就算做完了，此时【内核socket对象的发送队列】里的数据会等到合适的时机进行发送） 根据协议类型（TCP或UDP），间接调用对应的sendmsg函数发送数据，tcp_sendmsg、udp_sendmsg。 调用传输层方法， 拷贝并使用sk_buffer副本，为丢包重传做服务； 并设置好tcp头部，窗口大小设置； 然后通过ip_queue_xmit发送出去； 调用网络层方法， 从本机路由表查询路由； 构建数据报的IP头信息； 调用网络过滤器netfilter 进行进一步处理； 根据MTU判断是否分片处理； 调用neigh_output发送； 调用到邻居子系统， 发送APR请求获取目标Mac地址，然后将sk_buffer中的指针移动到MAC头位置，填充MAC头。 此时的sk_buffer已经是一个完整的以太网数据帧，进入【网络设备子系统】处理。 调用到网络设备子系统， __dev_queue_xmit，初始化qdisc队列排队规则，获取网络设备的传输队列txq，选择其中一个将skb放入。这一步有可能会中断（比如用户线程内核态CPU时间用尽），后续由响应该软中断的【内核ksoftirqd线程】来调用dev_hard_start_xmit方法继续执行。 dev_hard_start_xmit，遍历网络设备传输队列进行发送数据。对于通过回环设备发送的数据，直接进入回环设备的”驱动”里的发送回调函数 loopback_xmit。对于其他设备则： 调用到网卡驱动程序， igb_xmit_frame，在RingBuffer中的数组里选取可用的位置，关联该位置和skb。然后映射数据包到DMA描述符，【网卡驱动程序】通过DMA方式将数据通过【物理网卡】发送出去。 igb_msix_ring，网卡在发送完毕的时候，会给 CPU 发送一个硬中断来通知 CPU。收到这个硬中断后会调用网卡驱动注册的硬中断回调函数触发NET_RX_SOFTIRQ类型的软中断。从而释放skb、清理RingBuffer。 内核接收数据包流程 大体流程如下：&#xA;当网卡收到数据以后，CPU发起一个中断，以通知CPU有数据到达。当CPU收到中断请求后，会去调用网络驱动注册的中断处理函数，触发软中断。ksoftirqd 检测到有软中断请求到达，开始轮询收包，收到后交由各级协议栈处理。当协议栈处理完并把数据放到接收队列的之后，唤醒用户进程。&#xA;写在最后 本文作为第一篇文章，简单梳理了一下内核发送、接收数据包的大体流程。今后会根据需要逐渐完善其中每个步骤的详细流程，加油吧～</description>
     </item>
     <item>
-      <title>Blog Test</title>
-      <link>http://localhost:1313/posts/blog-test/</link>
-      <pubDate>Thu, 29 Aug 2024 21:42:47 +0800</pubDate>
-      <guid>http://localhost:1313/posts/blog-test/</guid>
-      <description>你好</description>
-    </item>
-    <item>
       <title>归档</title>
       <link>http://localhost:1313/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
