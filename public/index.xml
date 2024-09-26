@@ -6,8 +6,15 @@
     <description>Recent content on kl &#39;s blog</description>
     <generator>Hugo</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 16 Sep 2024 11:48:57 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 26 Sep 2024 14:45:04 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从kube-ovn中vpc网关EIP到Netfilter Hook优先级探讨</title>
+      <link>http://localhost:1313/posts/kube-ovn-eip-netfilter/</link>
+      <pubDate>Thu, 26 Sep 2024 14:45:04 +0800</pubDate>
+      <guid>http://localhost:1313/posts/kube-ovn-eip-netfilter/</guid>
+      <description>前言 博主近期工作上需要和kube-ovn打交道，后续可能会涉及到基于kube-ovn的二开，因此需要详细了解其特性。昨天在工作中接到了一个关于**“k8s平台中容器部署的虚拟机中，先ping着外网，然后绑定EIP成功后还是不通，需要把ping关了重新ping才生效，解绑EIP也是如此“**的问题分析。&#xA;VPC kube-ovn中关于VPC的设计，引用原文：&#xA;VPC 主要用于有多租户网络强隔离的场景，部分 Kubernetes 网络功能在多租户网络下存在冲突。 例如节点和 Pod 互访，NodePort 功能，基于网络访问的健康检查和 DNS 能力在多租户网络场景暂不支持。 为了方便常见 Kubernetes 的使用场景，Kube-OVN 默认 VPC 做了特殊设计，该 VPC 下的 Subnet 可以满足 Kubernetes 规范。用户自定义 VPC 支持本文档介绍的静态路由，EIP 和 NAT 网关等功能。 常见隔离需求可通过默认 VPC 下的网络策略和子网 ACL 实现，在使用自定义 VPC 前请明确是否需要 VPC 级别的隔离，并了解自定义 VPC 下的限制。 在 Underlay 网络下，物理交换机负责数据面转发，VPC 无法对 Underlay 子网进行隔离。&#xA;可见kube-ovn中VPC的设计是针对Overlay网络的多租户隔离需求，像单租户下的Overlay网络、Underlay网络分别可以通过k8s中的网络策略、Underlay的Vlan实现隔离需求。&#xA;自定义VPC主要是围绕一个VPC网关实现EIP、自定义路由、自定义内部负载均衡、自定义vpc-dns等功能，本次主要设计其EIP功能，拓扑架构如图：&#xA;VPC Nat Gateway 从具体的CR资源来看其对应关系：&#xA;[root@cd56 ~]# kubectl get vpc-nat-gateways.kubeovn.io NAME VPC SUBNET LANIP eip-p7cs4r5y vpc-iwm2hkn4 subnet-skwgfk6s 13.13.0.253 [root@cd56 ~]# kubectl get vpc-nat-gateways.</description>
+    </item>
     <item>
       <title>Linux 内核数据流概览初探</title>
       <link>http://localhost:1313/posts/kerneldataflow/</link>

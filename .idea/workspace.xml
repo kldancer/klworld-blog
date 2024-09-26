@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="558f0388-5671-4341-a2bc-fac7bfe8cd8d" name="更改" comment="更新：kernelDataFlow.md">
-      <change afterPath="$PROJECT_DIR$/assets/css/extended/blank.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/partials/toc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/kernelDataFlow_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/kernelDataFlow_2.png" afterDir="false" />
+    <list default="true" id="558f0388-5671-4341-a2bc-fac7bfe8cd8d" name="更改" comment="调整：调整目录格式、图片引用模式">
+      <change afterPath="$PROJECT_DIR$/content/posts/img/kube-ovn-eip-netfilter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/posts/kube-ovn-eip-netfilter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/partials/post_meta.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/bg1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/bg2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/kube-ovn-eip-netfilter.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/extended/blank.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/extended/blank.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/posts/kernelDataFlow.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/kernelDataFlow.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hugo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/hugo.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/_default/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/_default/single.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,31 +48,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ykl/data/blog/klworldy.github.io/static&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ssh.settings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/ykl/data/blog/klworldy.github.io/static/img",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ssh.settings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/img" />
+      <recent name="$PROJECT_DIR$/content/posts/img" />
+      <recent name="$PROJECT_DIR$/content/posts" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/layouts/_default" />
-      <recent name="$PROJECT_DIR$/layouts/partials" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
@@ -90,7 +96,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="Add workflow" />
     <MESSAGE value="更新：kernelDataFlow.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新：kernelDataFlow.md" />
+    <MESSAGE value="调整：调整目录格式、图片引用模式" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整：调整目录格式、图片引用模式" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

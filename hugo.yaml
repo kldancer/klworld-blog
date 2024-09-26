@@ -1,6 +1,6 @@
 baseURL: "https://examplesite.com/"
 title: "kl 's blog"
-paginate: 5
+paginate: 5 # 每页显示的文章数
 theme: PaperMod
 
 enableRobotsTXT: true
@@ -24,6 +24,9 @@ params:
   defaultTheme: auto # dark, light
   disableThemeToggle: false   # 在页面标题旁边显示图标以更改主题
 
+  hideFooter: false # 隐藏页脚
+  ShowLastMod: true #显示文章更新时间
+  ShowWordCounts: true
   ShowReadingTime: true # 显示帖子阅读时间
   ShowShareButtons: false # 显示分享按钮添加
   ShowPostNavLinks: true # 在单个帖子下添加上一篇/下一篇帖子建议
@@ -37,8 +40,8 @@ params:
   comments: false # 评论功能。 https://gohugo.io/content-management/comments/
   hidemeta: false
   hideSummary: false
-  showtoc: true # 在每篇文章开头显示目录
-  tocopen: false # 使帖子的目录默认保持打开
+  ShowToc: true # 显示目录
+  tocOpen: true # 自动展开目录
 
   # 各种图标的地址
   assets:
@@ -51,7 +54,7 @@ params:
     safari_pinned_tab: "/safari-pinned-tab.svg"
 
   label:
-    text: "Home"
+    text: "KL`博客"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
@@ -73,8 +76,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "Hi 你来啦～ \U0001F44B"
+    Content: 逆水行舟
 
   socialIcons:
     - name: github
@@ -96,7 +99,7 @@ params:
     hiddenInSingle: true # 隐藏在单页上
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content" # 填入Github仓库的地址
+    URL: "https://github.com/kldancer/klworldy.github.io" # 填入Github仓库的地址
     Text: "Suggest Changes" # edit text
     appendFilePath: true # 是否在URL后加入文件路径
 
@@ -116,19 +119,19 @@ params:
 menu:
   main:
     - identifier: archives # 需做额外配置，具体参考下文
-      name: 归档
+      name: 📚归档
       url: /archives/
       weight: 10
     - identifier: categories
-      name: 分类
+      name: 🐶分类
       url: /categories/
       weight: 20
     - identifier: tags
-      name: 标签
+      name: 🔖标签
       url: /tags/
       weight: 30
     - identifier: search # 需做额外配置，具体参考下文
-      name: 搜索
+      name: 🔍搜索
       url: /search/
       weight: 40
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
@@ -153,3 +156,6 @@ outputs:
 languageCode: zh
 defaultContentLanguage: zh
 
+enableEmoji: true
+permalinks: #浏览器链接显示方式
+  post: "/:title/"
