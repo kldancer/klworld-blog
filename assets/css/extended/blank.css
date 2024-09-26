@@ -81,7 +81,7 @@ img:active {
 
 .list {
     /* 添加!important表示覆盖默认的设置 */
-    background-image: url("/img/bg1.jpg") !important;
+    background-image: url("../../img/bg1.jpg") !important;
     /* 照片不重复出现 */
     background-repeat: no-repeat;
     /* 照片大小 */
@@ -92,7 +92,7 @@ img:active {
 
 /* 在前面加上.dark，.dark和.list之间注意空格问题 */
 .dark.list {
-    background-image: url("/img/bg2.jpg") !important;
+    background-image: url("../../img/bg2.jpg") !important;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;

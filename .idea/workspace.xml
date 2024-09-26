@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="558f0388-5671-4341-a2bc-fac7bfe8cd8d" name="更改" comment="调整：调整目录格式、图片引用模式">
-      <change afterPath="$PROJECT_DIR$/content/posts/img/kube-ovn-eip-netfilter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/posts/kube-ovn-eip-netfilter.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/partials/post_meta.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/bg1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/bg2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/kube-ovn-eip-netfilter.png" afterDir="false" />
+    <list default="true" id="558f0388-5671-4341-a2bc-fac7bfe8cd8d" name="更改" comment="更新：kube-ovn-eip-netfilter.png；样式调整">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/extended/blank.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/extended/blank.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/kernelDataFlow.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/kernelDataFlow.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hugo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/hugo.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/_default/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/_default/single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/partials/post_meta.html" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/partials/post_meta.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +90,8 @@
     <MESSAGE value="Add workflow" />
     <MESSAGE value="更新：kernelDataFlow.md" />
     <MESSAGE value="调整：调整目录格式、图片引用模式" />
-    <option name="LAST_COMMIT_MESSAGE" value="调整：调整目录格式、图片引用模式" />
+    <MESSAGE value="更新：kube-ovn-eip-netfilter.png；样式调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新：kube-ovn-eip-netfilter.png；样式调整" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
