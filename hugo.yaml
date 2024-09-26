@@ -31,7 +31,7 @@ params:
   ShowShareButtons: false # 显示分享按钮添加
   ShowPostNavLinks: true # 在单个帖子下添加上一篇/下一篇帖子建议
   ShowBreadCrumbs: true # 面包屑导航
-  ShowCodeCopyButtons: false #显示复制代码按钮
+  ShowCodeCopyButtons: true #显示复制代码按钮
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
