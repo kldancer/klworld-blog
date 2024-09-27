@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="558f0388-5671-4341-a2bc-fac7bfe8cd8d" name="更改" comment="更新：样式调整">
+    <list default="true" id="558f0388-5671-4341-a2bc-fac7bfe8cd8d" name="更改" comment="更新：背景图片添加">
+      <change afterPath="$PROJECT_DIR$/layouts/_default/archives.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/_default/terms.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/partials/comments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/partials/cover.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/extended/blank.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/extended/blank.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/kube-ovn-eip-netfilter.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/posts/kube-ovn-eip-netfilter.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hugo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/hugo.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/bg1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/bg1.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/bg2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/bg2.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/kube-ovn-eip-netfilter.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/kube-ovn-eip-netfilter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/partials/post_meta.html" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/partials/post_meta.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +56,7 @@
     "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/ykl/data/blog/klworldy.github.io/static/img",
+    "last_opened_file_path": "/Users/ykl/data/blog/klworldy.github.io/layouts/partials",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -66,11 +67,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/layouts/partials" />
+      <recent name="$PROJECT_DIR$/layouts/_default" />
       <recent name="$PROJECT_DIR$/static/img" />
       <recent name="$PROJECT_DIR$/content/posts/img" />
       <recent name="$PROJECT_DIR$/content/posts" />
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/layouts/_default" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
@@ -98,7 +99,8 @@
     <MESSAGE value="调整：调整目录格式、图片引用模式" />
     <MESSAGE value="更新：kube-ovn-eip-netfilter.png；样式调整" />
     <MESSAGE value="更新：样式调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新：样式调整" />
+    <MESSAGE value="更新：背景图片添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新：背景图片添加" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

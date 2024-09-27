@@ -25,9 +25,9 @@ params:
   disableThemeToggle: false   # 在页面标题旁边显示图标以更改主题
 
   hideFooter: false # 隐藏页脚
-  ShowLastMod: true #显示文章更新时间
+  ShowLastMod: false #显示文章更新时间
   ShowWordCounts: true
-  ShowReadingTime: false # 显示帖子建议阅读时间
+  ShowReadingTime: true # 显示帖子建议阅读时间
   ShowShareButtons: false # 显示分享按钮添加
   ShowPostNavLinks: true # 在单个帖子下添加上一篇/下一篇帖子建议
   ShowBreadCrumbs: true # 面包屑导航
@@ -37,7 +37,7 @@ params:
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: false # 评论功能。 https://gohugo.io/content-management/comments/
+  comments: true # 评论功能。
   hidemeta: false
   hideSummary: false
   ShowToc: true # 显示目录
